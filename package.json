@@ -1,0 +1,16 @@
+{
+  "name": "fullstack-js-monorepo",
+  "version": "1.0.0",
+  "description": "A monorepo containing a fullstack js app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo run dev",
+		"build": "turbo run build"
+  },
+  "keywords": [],
+  "author": "Joabesv",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^1.6.3"
+  }
+}

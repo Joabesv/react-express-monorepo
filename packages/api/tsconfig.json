@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "removeComments": true,
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "types": ["node"],
+    "alwaysStrict": true,
+    "strict": true
+    // this rule defeated me 👺
+    },
+  "exclude": ["node_modules", "dist"]
+}
