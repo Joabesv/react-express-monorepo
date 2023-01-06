@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  mongodb-challenge:
+  mongodb-monorepo:
     image: mongo:4.4.6
     restart: always
     environment:

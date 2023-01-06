@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src",
+    "dev": "PORT=5000 HOST=\"localhost\" tsx watch src",
     "build": "rimraf build && tsx esbuild.ts",
     "prod": "npm run build && node dist"
   },

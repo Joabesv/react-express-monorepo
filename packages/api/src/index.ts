@@ -1,6 +1,6 @@
-import express from 'express'
-const app = express()
-const port = 3000
+import { HOST, PORT, SERVER_URL } from './config/config';
+import { server } from './server';
 
-app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+server.listen(Number(PORT), HOST, () => {
+  console.info('loggando pq deu bom, rodando em', SERVER_URL);
+});
