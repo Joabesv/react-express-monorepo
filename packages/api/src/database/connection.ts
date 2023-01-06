@@ -16,7 +16,10 @@ export const connection = async () => {
 
     return connectedClient.db(DATABASE_NAME);
   } catch (err) {
-    await connectedClient?.close();
     throw new Error('deu ruim na connection', { cause: err });
   }
+};
+
+export const closeConnection = async () => {
+  await connectedClient?.close();
 };
