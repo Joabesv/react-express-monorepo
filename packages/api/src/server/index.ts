@@ -1,12 +1,10 @@
 import express from 'express';
+import { connection } from '../database/connection';
 import { contestRoutes } from '../routes';
 
-const server = express();
-
-server.use('/api', contestRoutes);
-
-server.get('/', async (req, res) => {
-  res.send({ msg: 'say hi from express' });
-});
-
-export { server };
+export const buildServer = async () => {
+  const server = express();
+  await connection();
+  server.use('/api', contestRoutes);
+  return server;
+};

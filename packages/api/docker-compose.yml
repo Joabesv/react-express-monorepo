@@ -3,7 +3,11 @@ services:
   mongodb-monorepo:
     image: mongo:4.4.6
     restart: always
+    volumes:
+      - mongodb-data:/var/lib/mongodb/data/
     expose:
       - 27017
     ports:
       - '27017:27017'
+volumes:
+  mongodb-data:
