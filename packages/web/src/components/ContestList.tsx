@@ -1,8 +1,8 @@
-import { useId } from 'react';
 import { Contest } from '../utils/contest';
+import { ContestPreview } from './ContestPreview';
 
 interface ContestListProps {
-  contests: Array<Contest>;
+  contests: Contest[];
 }
 
 export function ContestList({ contests }: ContestListProps) {
@@ -10,12 +10,7 @@ export function ContestList({ contests }: ContestListProps) {
     <>
       <div className="contest-list">
         {contests.map((contest) => {
-          return (
-            <div className="contest-preview" key={useId()} >
-              <div className="category">{contest.categoryName}</div>
-              <div className="contest">{contest.contestName}</div>
-            </div>
-          );
+          return <ContestPreview key={contest.id} contest={contest} />;
         })}
       </div>
     </>
