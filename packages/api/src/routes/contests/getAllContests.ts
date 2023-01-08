@@ -21,10 +21,12 @@ export const getAllContests = async (req: Request, res: Response) => {
     .collection('contests')
     .find({})
     .toArray()) as IContest[];
-  const data = contests.map(({ id, categoryName, contestName }) => ({
-    id,
-    categoryName,
-    contestName,
-  }));
-  return res.status(200).send(data);
+  const filteredContests = contests.map(
+    ({ id, categoryName, contestName }) => ({
+      id,
+      categoryName,
+      contestName,
+    })
+  );
+  return res.status(200).send({ contests: filteredContests });
 };
